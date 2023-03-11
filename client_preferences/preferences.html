@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferencias de Usuario</title>
+    <link rel="stylesheet" href="preferences.css">
+</head>
+
+<body>
+    <nav class="nav">
+		<div class="logo">
+			<a href="#">MySite</a>
+		</div>
+		<ul>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Perfil</a></li>
+			<li><a href="#">Configuración</a></li>
+			<li><a href="#">Cerrar Sesión</a></li>
+		</ul>
+	</nav>
+
+    <section>
+        <h2>Preferencias de cuenta</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña">
+
+            <label for="confirmar-contraseña">Confirmar contraseña:</label>
+            <input type="password" id="confirmar-contraseña" name="confirmar-contraseña">
+
+            <input type="submit" value="Guardar cambios">
+        </form>
+    </section>
+
+    <section>
+        <h2>Preferencias de notificaciones</h2>
+        <form>
+            <p>Seleccione las notificaciones que desea recibir:</p>
+
+            <input type="checkbox" id="notificacion-email" name="notificacion-email">
+            <label for="notificacion-email">Recibir notificaciones por email</label>
+
+            <input type="checkbox" id="notificacion-mensaje" name="notificacion-mensaje">
+            <label for="notificacion-mensaje">Recibir notificaciones por mensaje</label>
+
+            <input type="submit" value="Guardar cambios">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

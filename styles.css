@@ -1,0 +1,91 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.nav .logo {
+	font-size: 1.5rem;
+}
+
+.nav .logo a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav li {
+	margin-left: 20px;
+}
+
+.nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav a:hover {
+	text-decoration: underline;
+}
+
+
+
+.row {
+	display: flex;
+}
+
+.column {
+	flex: 50%;
+	padding: 10px;
+	height: 100vh;
+	border-left: 1px solid #e9e9e9;
+	margin-top: 30px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	height: 100vh;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+select,
+input[type="radio"],
+input[type="checkbox"],
+button {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.checkbox-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 0.25rem;
+	background-color: #4CAF50;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}

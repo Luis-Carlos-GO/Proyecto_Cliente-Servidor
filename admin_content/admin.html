@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#">Mi Sitio</a>
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Formulario de edición de video -->
+    <div class="form-container">
+        <h2>Editar video</h2>
+        <form>
+            <label for="titulo-video-edit">Título del video:</label>
+            <input type="text" id="titulo-video-edit" name="titulo-video-edit">
+
+            <label for="url-video-edit">URL del video:</label>
+            <input type="text" id="url-video-edit" name="url-video-edit">
+
+            <input type="submit" value="Guardar cambios">
+        </form>
+    </div>
+
+    <!-- Formulario de edición de noticia -->
+    <div class="form-container">
+        <h2>Editar noticia</h2>
+        <form>
+            <label for="titulo-noticia-edit">Título de la noticia:</label>
+            <input type="text" id="titulo-noticia-edit" name="titulo-noticia-edit">
+
+            <label for="contenido-noticia-edit">Contenido de la noticia:</label>
+            <textarea id="contenido-noticia-edit" name="contenido-noticia-edit"></textarea>
+
+            <input type="submit" value="Guardar cambios">
+        </form>
+    </div>
+
+    <hr>
+
+
+    <!-- Formulario para agregar un nuevo video -->
+    <div class="form-container">
+        <h2>Agregar un nuevo video</h2>
+        <form>
+            <label for="titulo-video">Título del video:</label>
+            <input type="text" id="titulo-video" name="titulo-video">
+
+            <label for="url-video">URL del video:</label>
+            <input type="text" id="url-video" name="url-video">
+
+            <input type="submit" value="Agregar video">
+        </form>
+    </div>
+
+    <!-- Formulario para agregar una nueva noticia -->
+    <div class="form-container">
+        <h2>Agregar una nueva noticia</h2>
+        <form>
+            <label for="titulo-noticia">Título de la noticia:</label>
+            <input type="text" id="titulo-noticia" name="titulo-noticia">
+
+            <label for="contenido-noticia">Contenido de la noticia:</label>
+            <textarea id="contenido-noticia" name="contenido-noticia"></textarea>
+
+            <input type="submit" value="Agregar noticia">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
