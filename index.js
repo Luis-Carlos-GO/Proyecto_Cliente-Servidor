@@ -1,42 +1,17 @@
-const sql = require("mssql/msnodesqlv8");
+const sql = require('mssql');
 
-
-var config ={
-    server:"MSI\\SQLEXPRESS",
-    database:"proyecto_cliente_servidor",
-    driver:"msnodesqlv8",
-    options:{
-        trustedConnection:true
+const config = {
+    server: '127.0.0.1\MSSQLSERVER,1433',
+    database: 'Proyecto_Cliente_Servidor',
+    options: {
+        trustedConnection: true
     }
+};
 
-}
+const pool = new sql.ConnectionPool(config);
 
-sql.connect(config,function(err){
-    if(err)console.log(err);
-    var request = new sql.Request();
-    request.query("select * from usuarios",function(err,records){
-        if(err)console.log(err)
-        else console.log(records);
-    })
-}) 
-
-
-var config ={
-    server:"MSI\\SQLEXPRESS",
-    database:"proyecto_cliente_servidor",
-    driver:"msnodesqlv8",
-    options:{
-        trustedConnection:true
-        
-    }
-
-}
-
-sql.connect(config,function(err){
-    if(err)console.log(err);
-    var request = new sql.Request();
-    request.query("select * from usuarios",function(err,records){
-        if(err)console.log(err)
-        else console.log(records);
-    })
-})
+pool.connect().then(() => {
+    // realizar consultas y otras operaciones aquí
+}).catch(err => {
+    // manejar errores de conexión aquí
+});
