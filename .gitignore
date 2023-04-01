@@ -31,7 +31,3 @@ build/
 .DS_Store
 Thumbs.db
 
-# Archivos de aplicación
-*.html
-*.css
-*.js

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Foro de Gimnasio</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		form {
+			margin: 30px auto;
+			max-width: 600px;
+			padding: 20px;
+			background-color: #f0f0f0;
+			border-radius: 10px;
+		}
+
+		input[type=text], textarea {
+			display: block;
+			margin: 10px 0;
+			padding: 10px;
+			width: 100%;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px #ccc;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+
+		.post {
+			margin: 30px auto;
+			max-width: 600px;
+			padding: 20px;
+			background-color: #f0f0f0;
+			border-radius: 10px;
+			box-shadow: 0 0 5px #ccc;
+		}
+
+		.post h2 {
+			margin-top: 0;
+		}
+
+		.post p {
+			margin-top: 10px;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<h1>Foro de Gimnasio</h1>
+
+	<form>
+		<label for="titulo">Título:</label>
+		<input type="text" id="titulo" name="titulo">
+
+		<label for="autor">Autor:</label>
+		<input type="text" id="autor" name="autor">
+
+		<label for="contenido">Contenido:</label>
+		<textarea id="contenido" name="contenido"></textarea>
+
+		<input type="submit" value="Publicar">
+	</form>
+
+	<div id="posts">
+		<!-- para cargar los foros -->
+	</div>
+
+	<script>
+		// Datos de ejemplo para mostrar en la página
+		var posts = [
+			{
+				titulo: "Rutina de ejercicios para principiantes",
+				autor: "Juan Pérez",
+				contenido: "Aquí les dejo una rutina de ejercicios para principiantes que he estado haciendo últimamente. Espero que les sirva."
+			},
+			{
+				titulo: "Cómo mantener la motivación para ir al gimnasio",
+				autor: "María García",
+				contenido: "A veces es difícil mantener la motivación para ir al gimnasio. Aquí les comparto algunos consejos que me han funcionado a mí."
+			},
+			{
+				titulo: "Mi progreso después de 3 meses de ejercicio",
+				autor: "Pedro Martínez",
+				contenido: "Después de 3 meses de ejercicio constante, he logrado bajar 5 kilos y mejorar mi salud en general. Les comparto mi experiencia y algunos tips."
+			}
+		];
