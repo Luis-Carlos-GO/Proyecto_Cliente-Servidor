@@ -1,0 +1,23 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "msnodesqlv8": "^3.1.0",
+    "mssql": "^9.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luis-Carlos-GO/Proyecto_Cliente-Servidor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Luis-Carlos-GO/Proyecto_Cliente-Servidor/issues"
+  },
+  "homepage": "https://github.com/Luis-Carlos-GO/Proyecto_Cliente-Servidor#readme",
+  "description": ""
+}
