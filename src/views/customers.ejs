@@ -1,0 +1,70 @@
+<%- include ('partials/_header') %>
+
+<div class="container">
+    <div class="row mt-7">
+        <div class="col-md-8">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>nº</th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>correo</th>
+                    <th>fecha nacimiento</th>
+                    <th>genero</th>
+                    <th>accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data) { %>
+                    <% for (var i=0; i< data.length; i++) { %>
+                        <tr>
+                            <td><%=(i + 1)%></td>
+                            <td><%= data[i].nombre%></td>
+                            <td><%= data[i].apellido%></td>
+                            <td><%= data[i].correo%></td>
+                            <td><%= data[i].fecha_nacimiento%></td>
+                            <td><%= data[i].genero%></td>
+                            <td>
+                                <a href="/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
+                                <a href="/update/<%= data[i].id %>" class="btn btn-info">update</a>
+                            </td>
+                        </tr>
+                    <% } %>
+                <%  } %>
+            </tbody>
+        </table>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/add" method="post">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="apellido" placeholder="Apellido" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="correo" placeholder="Correo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="contrasena" placeholder="Contraseña" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="fecha_nacimiento" placeholder="Fecha nacimiento / Formato (yyyy-mm-dd)" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="genero" placeholder="Genero" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            SAVE CUSTOMER
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/_footer') %>

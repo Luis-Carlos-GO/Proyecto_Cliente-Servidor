@@ -1,0 +1,65 @@
+<%- include ('partials/_header') %>
+
+<div class="container">
+    <div class="row mt-7">
+        <div class="col-md-8">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>nº</th>
+                    <th>usuario_id</th>
+                    <th>fecha</th>
+                    <th>peso</th>
+                    <th>altura</th>
+                    <th>masa_muscular</th>
+                    <th>grasa_corporal</th>
+                    <th>masa_osea</th>
+                    <th>accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data) { %>
+                    <% for (var i=0; i< data.length; i++) { %>
+                        <tr>
+                            <td><%=(i + 1)%></td>
+                            <td><%= data[i].usuario_id%></td>
+                            <td><%= data[i].fecha%></td>
+                            <td><%= data[i].peso%></td>
+                            <td><%= data[i].altura%></td>
+                            <td><%= data[i].masa_muscular%></td>
+                            <td><%= data[i].grasa_corporal%></td>
+                            <td><%= data[i].masa_osea%></td>
+                            <td>
+                                <a href="/rutinas/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
+                                <a href="/rutinas/update/<%= data[i].id %>" class="btn btn-info">update</a>
+                            </td>
+                        </tr>
+                    <% } %>
+                <%  } %>
+            </tbody>
+        </table>
+        </div> 
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rutinas/add" method="post">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre Rutina" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="descripcion" placeholder="Descripcion" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nivel" placeholder="Nivel" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            GUARDAR RUTINA
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>
+
+<%- include ('partials/_footer') %>

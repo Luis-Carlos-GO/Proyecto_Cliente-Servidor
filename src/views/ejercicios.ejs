@@ -1,0 +1,82 @@
+<%- include ('partials/_header') %>
+
+<div class="container">
+    <div class="row mt-7">
+        <div class="col-md-8">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>nº</th>
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                    <th>imagen url</th>
+                    <th>video url</th>
+                    <th>dificultad</th>
+                    <th>tipo</th>
+                    <th>musculos trabajados</th>
+                    <th>calarias quemadas</th>
+                    <th>accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data) { %>
+                    <% for (var i=0; i< data.length; i++) { %>
+                        <tr>
+                            <td><%=(i + 1)%></td>
+                            <td><%= data[i].nombre%></td>
+                            <td><%= data[i].descripcion%></td>
+                            <td><%= data[i].imagen_url%></td>
+                            <td><%= data[i].video_url%></td>
+                            <td><%= data[i].dificultad%></td>
+                            <td><%= data[i].tipo%></td>
+                            <td><%= data[i].musculos_trabajados%></td>
+                            <td><%= data[i].calorias_quemadas%></td>
+                            <td>
+                                <a href="/ejercicios/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
+                                <a href="/ejercicios/update/<%= data[i].id %>" class="btn btn-info">update</a>
+                            </td>
+                        </tr>
+                    <% } %>
+                <%  } %>
+            </tbody>
+        </table>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/ejercicios/add" method="post">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="descripcion" placeholder="Descripcion" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="imagen_url" placeholder="URL de la imagen" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="video_url" placeholder="URL del video" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="dificultad" placeholder="Dificultad" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="tipo" placeholder="Tipo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="musculos_trabajados" placeholder="Musculos trabajados" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="calorias_quemadas" placeholder="Calorias quemadas" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Guardar Ejercicio
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/_footer') %>

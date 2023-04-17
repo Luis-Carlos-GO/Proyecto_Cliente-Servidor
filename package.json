@@ -1,24 +1,22 @@
 {
-  "name": "git",
+  "name": "crud-nodejs-mysql",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/app.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "msnodesqlv8": "^3.1.0",
-    "mssql": "^9.1.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-myconnection": "^1.0.4",
+    "morgan": "^1.10.0",
     "mysql": "^2.18.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Luis-Carlos-GO/Proyecto_Cliente-Servidor.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Luis-Carlos-GO/Proyecto_Cliente-Servidor/issues"
-  },
-  "homepage": "https://github.com/Luis-Carlos-GO/Proyecto_Cliente-Servidor#readme",
-  "description": ""
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
