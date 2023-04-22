@@ -1,71 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Administrador</title>
-    <link rel="stylesheet" href="../admin.css">
-</head> 
+    <link rel="stylesheet" href="../menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-hceHpG5M5K5+W5HTFPI5z5w3wqjK4q/5HCxBa5D+pKsdZm8DfW+mRDxoxtYGmHhp"
+      crossorigin="anonymous"
+    />
+  </head>
 
-
-    
-<body>
-	<header class="nav">
+  <body>
+    <nav class="nav">
 		<div class="logo">
-			<a href="#">MyWebsite</a>
+		  <a href="/admin">Mucle Boost</a>
 		</div>
 		<ul>
-			<li><a href="/menu">Inicio</a></li>
-			<li><a href="/ejercicios">Ejercicios</a></li>
-			<li><a href="/rutinas">Rutinas</a></li>
-			<li><a href="#">Contacto</a></li>
+		  <li><a href="/menu">Inicio</a></li>
+		  <li><a href="/ejercicios">Ejercicios</a></li>
+		  <li><a href="/rutinas_user">Rutinas</a></li>
+		  <li><a href="/profile">Perfil</a></li>
+		  <li><a href="/">Cerrar Sesión</a></li>
+		  <li><a href="/WorkPage">Contacto</a></li>
 		</ul>
-	</header>
-	<div class="container">
-		<div class="column column1">
-			<h2>Noticias</h2>
-			<div class="card">
-				<h3>Título de la noticia 1</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis mauris mauris, id congue nulla lobortis id.</p>
-				<a href="#">Leer más</a>
-			</div>
-			<div class="card">
-				<h3>Título de la noticia 2</h3>
-				<p>Aliquam quis augue vitae nulla luctus aliquet. Duis commodo mi vel fringilla bibendum.</p>
-				<a href="#">Leer más</a>
-			</div>
-			<div class="card">
-				<h3>Título de la noticia 3</h3>
-				<p>Sed fermentum lectus at ipsum hendrerit, a lacinia odio pellentesque. Praesent eleifend vestibulum lacus.</p>
-				<a href="#">Leer más</a>
-			</div>
-		</div>
-		<div class="column column2">
-			<button class="btn" href="/rutinas">Get started</button>
-		</div>
-		<div class="column column3">
-			<h2>Videos</h2>
-			<div class="card">
-				<h3>Título del video 1</h3>
-				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<div class="card">
-				<h3>Título del video 2</h3>
-				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<div class="card">
-				<h3>Título del video 3</h3>
-				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
+	  </nav>
 
-	<footer class="footer">
-        <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
+    <div class="container">
+      <div class="column column1">
+        <h2>Noticias</h2>
+        <div class="card">
+          <h3>
+            "Entrenamiento HIIT de 10 minutos para quemar calorías"
+          </h3>
+          <p>
+            En esta noticia se describe un entrenamiento de alta intensidad de 10 minutos que puede ayudar a quemar calorías de manera eficiente y en poco tiempo.
+          </p>
+          <a href="https://www.menshealth.com/es/fitness/a36713692/entrenamiento-hiit-10-minutos-quemar-grasa-ganar-musculo/" target="_blank">Leer más</a>
+        </div>
+        <div class="card">
+          <h3>
+            "Estudio demuestra los beneficios del yoga para la salud mental"
+          </h3>
+          <p>
+            Esta noticia informa sobre un estudio que ha encontrado que la práctica regular de yoga puede mejorar la salud mental y reducir los niveles de estrés y ansiedad.
+          </p>
+          <a href="https://salud.nih.gov/recursos-de-salud/nih-noticias-de-salud/yoga-para-la-salud#:~:text=En%20estudios%2C%20el%20yoga%20ha,los%20s%C3%ADntomas%20de%20la%20menopausia." target="_blank">Leer más</a>
+        </div>
+        <div class="card">
+          <h3>
+            "Cómo mantener la motivación para hacer ejercicio en casa"
+          </h3>
+          <p>
+            Esta noticia proporciona consejos y estrategias para mantener la motivación y seguir haciendo ejercicio en casa, incluso cuando puede resultar difícil o aburrido.
+          </p>
+          <a href="https://www.universal-assistance.com/uablog/tips-para-recuperar-la-motivacion-para-hacer-ejercicio/" target="_blank">Leer más</a>
+        </div>
+		<div class="card">
+			<h3>
+			  " Estudio demuestra que el ejercicio ayuda a mejorar la memoria en adultos mayores"
+			</h3>
+			<p>
+				Un estudio reciente realizado por la Universidad de Illinois encontró que hacer ejercicio regularmente puede mejorar la memoria en adultos mayores.
+			</p>
+			<a href="https://www.latimes.com/espanol/eeuu/articulo/2022-08-02/estudio-ejercicio-ayuda-a-adultos-con-problemas-de-memoria#:~:text=Un%20nuevo%20estudio%20sugiere%20que,a%20prevenir%20problemas%20de%20memoria.&text=Una%20nueva%20investigaci%C3%B3n%20sugiere%20que,mayores%20con%20problemas%20de%20memoria." target="_blank">Leer más</a>
+		  </div>
+      </div>
+
+      <div class="column column2">
+        <button class="ripple"><a href="/ejercicios">Get Started</a></button>
+      </div>
+
+      <div class="column column3">
+        <h2>Videos</h2>
+        <div class="card">
+          <h3>Título del video 1</h3>
+          <iframe
+            width="100%"
+            height="auto"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <p>RickRoll</p>
+        </div>
+        <div class="card">
+          <h3>Título del video 1</h3>
+          <iframe
+            width="100%"
+            height="auto"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <p>RickRoll</p>
+        </div>
+        <div class="card">
+          <h3>Título del video 1</h3>
+          <iframe
+            width="100%"
+            height="auto"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <p>RickRoll</p>
+        </div>
+        <div class="card">
+          <h3>Título del video 1</h3>
+          <iframe
+            width="100%"
+            height="auto"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <p>RickRoll</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const buttons = document.querySelectorAll(".ripple");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function (e) {
+          const x = e.pageX;
+          const y = e.pageY;
+
+          const buttonTop = e.target.offsetTop;
+          const buttonLeft = e.target.offsetLeft;
+
+          const xInside = x - buttonLeft;
+          const yInside = y - buttonTop;
+
+          const circle = document.createElement("span");
+          circle.classList.add("circle");
+          circle.style.top = yInside + "px";
+          circle.style.left = xInside + "px";
+
+          this.appendChild(circle);
+
+          setTimeout(() => circle.remove(), 500);
+        });
+      });
+    </script>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3>Muscle Boost</h3>
+          <p>Dirección de la empresa</p>
+          <p>Teléfono: +506 8880 9900</p>
+          <p>Email: muscleboost@mysite.com</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="/menu">Inicio</a></li>
+            <li><a href="/ejercicios">Ejercicios</a></li>
+            <li><a href="/rutinas">Rutinas</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Síguenos</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-    </body>
-    
-    </html>
-    
-	
+  </body>
+</html>

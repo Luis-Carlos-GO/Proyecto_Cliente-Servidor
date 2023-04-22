@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../login.css" />
+    <title>Form Input Wave</title>
+  </head>
+  <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administrador</title>
-    <link rel="stylesheet" href="../admin.css">
-</head> 
-
-<body>
-    <div id="Encabezado">
-        <h1>MuscleMate</h1>
+    <h1>Muscle Boost</h1>
+    <div class="container">
+      <h2>Please Login</h2>
+      <form>
+        <div class="form-control">
+          <input type="text" required />
+          <label>Email</label>
+        </div>
+        <div class="form-control">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+        <button class="btn"> <a href="/menu">Login</a></button>
+        <p class="text">Don't have an account? <a href="#">Register</a></p>
+      </form>
     </div>
+    <script>
+      const labels = document.querySelectorAll(".form-control label");
 
-    <div id="login">
-        <h2>Log In Account</h2>
-            <form name="UserDataEntry" action="processor.html" method="get">
-                <p>Username</p>
-                <input type="text" name="txtUserName" id="txtUserName">
-            </form>
-            <form name="PassDataEntry" action="processor.html" method="get">
-                <p>Password</p>
-                <input type="text" name="txtPassword" id="txtPassword">
-            </form>
-            <a href="/menu" class="btn btn-info">SIGN IN </a>
-            <p></p>
-            <input type="checkbox">Remember Me</input>
-            <p></p>
-            <a href="/signin">Don't have account yet?</a>
-    </div>
-    <footer class="footer">
-        <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
-    </footer>
-    </body>
-    
-    </html>
+      labels.forEach((label) => {
+        label.innerHTML = label.innerText
+          .split("")
+          .map(
+            (letter, idx) =>
+              `<span style="transition-delay:${idx * 30}ms">${letter}</span>`
+          )
+          .join("");
+      });
+    </script>
+  </body>
+</html>

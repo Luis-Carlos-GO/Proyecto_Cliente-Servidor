@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Administrador</title>
-    <link rel="stylesheet" href="../admin.css">
-</head> 
+    <!-- <link rel="stylesheet" href="../singin.css"> -->
+  </head>
 
-<body>
-
+  <body>
     <nav class="nav">
-        <div class="logo">
-            <a href="#">Mi Sitio</a>
-        </div>
-        <ul>
-            <li><a href="/">CRUD CLIENTES</a></li>
-            <li><a href="/ejercicios">CRUD EJERCICIOS</a></li>
-            <li><a href="/rutinas">CRUD RUTINAS</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
+      <div class="logo">
+        <a href="#">Mi Sitio</a>
+      </div>
+      <ul>
+        <li><a href="/">CRUD CLIENTES</a></li>
+        <li><a href="/ejercicios">CRUD EJERCICIOS</a></li>
+        <li><a href="/rutinas">CRUD RUTINAS</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
     </nav>
 
-
-<div class="col-md-5">
-  <div class="card">
-      <div class="card-body">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body">
           <form action="/add" method="post">
-              <div class="form-group">
-                  <input type="text" name="nombre" placeholder="Nombre" class="form-control">
-              </div>
-              <div class="form-group">
-                  <input type="text" name="apellido" placeholder="Apellido" class="form-control">
-              </div>
-              <div class="form-group">
-                  <input type="text" name="correo" placeholder="Correo" class="form-control">
-              </div>
-              <div class="form-group">
-                  <input type="text" name="contrasena" placeholder="Contraseña" class="form-control">
-              </div>
-              <div class="form-group">
-                  <input type="text" name="fecha_nacimiento" placeholder="Fecha nacimiento / Formato (yyyy-mm-dd)" class="form-control">
-              </div>
-              <div class="form-group">
-                  <input type="text" name="genero" placeholder="Genero" class="form-control">
-              </div>
-              <button type="submit" class="btn btn-primary">
-                  SAVE CUSTOMER
-              </button>
+            <div class="form-group">
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="apellido"
+                placeholder="Apellido"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="correo"
+                placeholder="Correo"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="contrasena"
+                placeholder="Contraseña"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="fecha_nacimiento"
+                placeholder="Fecha nacimiento / Formato (yyyy-mm-dd)"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="genero"
+                placeholder="Genero"
+                class="form-control"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">SAVE CUSTOMER</button>
           </form>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
 
-
-
-<footer class="footer">
-    <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
-</footer>
-</body>
-
+    <footer class="footer">
+      <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>

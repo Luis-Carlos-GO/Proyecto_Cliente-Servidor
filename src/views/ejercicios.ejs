@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Administrador</title>
-    <link rel="stylesheet" href="../admin.css">
-</head> 
+    <link rel="stylesheet" href="../ejercicios.css" />
+  </head>
 
-<body>
-
+  <body>
     <nav class="nav">
-        <div class="logo">
-            <a href="#">Mi Sitio</a>
-        </div>
-        <ul>
-            <li><a href="/menu">CRUD CLIENTES</a></li>
-            <li><a href="/ejercicios">CRUD EJERCICIOS</a></li>
-            <li><a href="/rutinas">CRUD RUTINAS</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+		<div class="logo">
+		  <a href="/admin">Mucle Boost</a>
+		</div>
+		<ul>
+		  <li><a href="/menu">Inicio</a></li>
+		  <li><a href="/ejercicios">Ejercicios</a></li>
+		  <li><a href="/rutinas_user">Rutinas</a></li>
+		  <li><a href="/profile">Perfil</a></li>
+		  <li><a href="/">Cerrar Sesión</a></li>
+		  <li><a href="/WorkPage">Contacto</a></li>
+		</ul>
+	  </nav>
 
-<div class="container">
-    <div class="row mt-7">
-        <div class="col-md-8">
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>nº</th>
-                    <th>nombre</th>
-                    <th>descripcion</th>
-                    <th>imagen url</th>
-                    <th>video url</th>
-                    <th>dificultad</th>
-                    <th>tipo</th>
-                    <th>musculos trabajados</th>
-                    <th>calarias quemadas</th>
-                    <th>accion</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% if(data) { %>
-                    <% for (var i=0; i< data.length; i++) { %>
-                        <tr>
-                            <td><%=(i + 1)%></td>
-                            <td><%= data[i].nombre%></td>
-                            <td><%= data[i].descripcion%></td>
-                            <td><%= data[i].imagen_url%></td>
-                            <td><%= data[i].video_url%></td>
-                            <td><%= data[i].dificultad%></td>
-                            <td><%= data[i].tipo%></td>
-                            <td><%= data[i].musculos_trabajados%></td>
-                            <td><%= data[i].calorias_quemadas%></td>
-                            <td>
-                                <a href="/ejercicios/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
-                                <a href="/ejercicios/update/<%= data[i].id %>" class="btn btn-info">update</a>
-                            </td>
-                        </tr>
-                    <% } %>
-                <%  } %>
-            </tbody>
-        </table>
-        </div>
-        <div class="col-md-5">
-            <div class="card">
-                <div class="card-body">
-                    <form action="/ejercicios/add" method="post">
-                        <div class="form-group">
-                            <input type="text" name="nombre" placeholder="Nombre" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="descripcion" placeholder="Descripcion" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="imagen_url" placeholder="URL de la imagen" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="video_url" placeholder="URL del video" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="dificultad" placeholder="Dificultad" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="tipo" placeholder="Tipo" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="musculos_trabajados" placeholder="Musculos trabajados" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="calorias_quemadas" placeholder="Calorias quemadas" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            Guardar Ejercicio
-                        </button>
-                    </form>
+    <div class="container">
+        <div class="row justify-content-center">
+          <% if(data) { %> <% for (var i=0; i< data.length; i++) { %>
+          <div class="col-md-4 mb-4">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="card-title"><%= data[i].nombre%></h5>
+                <div class="video-container">
+                  <iframe
+                    width="100%"
+                    height="auto"
+                    src="<%= data[i].video_url%>"
+                    frameborder="0"
+                    allowfullscreen
+                  ><%= data[i].video_url%></iframe>
                 </div>
+                <p class="card-text"><strong>Tipo:</strong> <%= data[i].tipo%></p>
+                <p class="card-text">
+                  <strong>Músculos trabajados:</strong> <%=
+                  data[i].musculos_trabajados%>
+                </p>
+              </div>
             </div>
+          </div>
+          <% } %> <% } %>
         </div>
-    </div>
-</div>
-
-<footer class="footer">
-    <p>© 2023 Mi Sitio. Todos los derechos reservados.</p>
-</footer>
-</body>
-
+      </div>          
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3>Muscle Boost</h3>
+          <p>Dirección de la empresa</p>
+          <p>Teléfono: +506 8880 9900</p>
+          <p>Email: muscleboost@mysite.com</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="/menu">Inicio</a></li>
+            <li><a href="/ejercicios">Ejercicios</a></li>
+            <li><a href="/rutinas_user">Rutinas</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Síguenos</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+        const container = document.querySelector(".container");
+        const rows = 10;
+      
+        for (let iterator = 0; iterator < rows * 3; iterator++) {
+          const img = document.createElement("img");
+          container.appendChild(img);
+        }
+      
+        function getRandomSize() {
+          return `${getRandomNr()}x${getRandomNr()}`;
+        }
+      
+        function getRandomNr() {
+          return Math.floor(Math.random() * 10) + 300;
+        }
+      
+        const cards = document.querySelectorAll(".card-custom");
+      
+        cards.forEach((card) => {
+          const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+          card.style.border = `2px solid #${randomColor}`;
+          card.style.boxShadow = `0 0 5px #${randomColor}, 0 0 10px #${randomColor}, 0 0 15px #${randomColor}, 0 0 20px #${randomColor}, 0 0 25px #${randomColor}`;
+          card.style.animation = `neon-blink-${randomColor} 1s infinite`;
+        });
+      </script>
+      
+  </body>
 </html>

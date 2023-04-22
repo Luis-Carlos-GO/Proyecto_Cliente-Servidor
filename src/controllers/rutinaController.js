@@ -13,6 +13,19 @@ rutinaController.list = (req,res)=>{
     });
 };
 
+rutinaController.list_user = (req,res)=>{
+    req.getConnection((err,conn) => {
+        conn.query('SELECT * FROM rutina', (err,rutinas) => {
+            if(err) {
+                res,json(err);
+            }
+            res.render('rutinas_user', {
+                data:rutinas
+            });
+        });
+    });
+};
+
 rutinaController.save = (req, res) => {
     const data = req.body;
 

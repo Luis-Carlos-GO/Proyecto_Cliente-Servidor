@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Administrador</title>
-    <link rel="stylesheet" href="../profile.css" />
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../rutinas_user.css" />
   </head>
 
   <body>
@@ -24,21 +23,23 @@
 	  </nav>
 
     <div class="container">
-      <div class="perfil">
-        <div class="info">
-          <img src=" " />
-          <p>Nombre: Juan Perez</p>
-          <p>País: Costa Rica</p>
-          <p>Correo electrónico: correo@electronico.com</p>
-          <p>Nombre de usuario: usuario123</p>
-          <p>Peso actual: 75kg</p>
-          <p>Peso deseado: 70kg</p>
-          <p>Fecha de registro: 10 de marzo, 2022</p>
+        <div class="row mt-7">
+          <% if(data) { %>
+            <% for (var i=0; i< data.length; i++) { %>
+              <div class="col-md-4">
+                <div class="card-custom">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= data[i].nombre %></h5>
+                    <p class="card-text"><%= data[i].descripcion %></p>
+                    <a href="/ejercicios" class="btn btn-primary">Ver</a>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          <%  } %>
         </div>
       </div>
-    </div>
-
-    <canvas id="miGrafica"></canvas>
+      
 
     <footer class="footer">
       <div class="footer-container">
@@ -73,43 +74,20 @@
         </div>
       </div>
     </footer>
-
     <script>
-      var miGrafica = new Chart(document.getElementById("miGrafica"), {
-    type: 'bar',
-    data: {
-        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
-        datasets: [{
-            label: "Peso corporal",
-            data: [100, 80, 78, 75, 75],
-            backgroundColor: [
-                'rgba(19, 255, 0, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)'
-            ],
-            borderColor: [
-                'rgba(19, 255, 0,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-
+      function getRandomSize() {
+        return `${getRandomNr()}x${getRandomNr()}`;
+      }
+      function getRandomNr() {
+        return Math.floor(Math.random() * 10) + 300;
+      }
+      const images = document.querySelectorAll(".card-custom img");
+      images.forEach((img) => {
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        img.style.border = `2px solid #${randomColor}`;
+        img.style.boxShadow = `0 0 5px #${randomColor}, 0 0 10px #${randomColor}, 0 0 15px #${randomColor}, 0 0 20px #${randomColor}, 0 0 25px #${randomColor}`;
+        img.style.animation = `neon-blink-${randomColor} 1s infinite`;
+      });
     </script>
   </body>
 </html>

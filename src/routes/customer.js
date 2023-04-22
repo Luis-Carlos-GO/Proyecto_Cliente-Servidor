@@ -31,6 +31,7 @@ router.get('/profile',customerController.profile);
 router.get('/workpage',customerController.workpages);
 router.get('/signin',customerController.signin);
 router.get('/',customerController.login);
+router.get('/rutinas_user',rutinaController.list_user);
 
 //metodos de rutinas
 router.get('/rutinas', rutinaController.list);
