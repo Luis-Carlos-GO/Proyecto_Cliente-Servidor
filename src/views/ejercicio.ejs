@@ -30,10 +30,13 @@
                 <tr>
                     <th>nº</th>
                     <th>nombre</th>
-                    <th>apellido</th>
-                    <th>correo</th>
-                    <th>fecha nacimiento</th>
-                    <th>genero</th>
+                    <th>descripcion</th>
+                    <th>imagen url</th>
+                    <th>video url</th>
+                    <th>dificultad</th>
+                    <th>tipo</th>
+                    <th>musculos trabajados</th>
+                    <th>calarias quemadas</th>
                     <th>accion</th>
                 </tr>
             </thead>
@@ -43,13 +46,16 @@
                         <tr>
                             <td><%=(i + 1)%></td>
                             <td><%= data[i].nombre%></td>
-                            <td><%= data[i].apellido%></td>
-                            <td><%= data[i].correo%></td>
-                            <td><%= data[i].fecha_nacimiento%></td>
-                            <td><%= data[i].genero%></td>
+                            <td><%= data[i].descripcion%></td>
+                            <td><%= data[i].imagen_url%></td>
+                            <td><%= data[i].video_url%></td>
+                            <td><%= data[i].dificultad%></td>
+                            <td><%= data[i].tipo%></td>
+                            <td><%= data[i].musculos_trabajados%></td>
+                            <td><%= data[i].calorias_quemadas%></td>
                             <td>
-                                <a href="/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
-                                <a href="/update/<%= data[i].id %>" class="btn btn-info">update</a>
+                                <a href="/ejercicios/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
+                                <a href="/ejercicios/update/<%= data[i].id %>" class="btn btn-info">update</a>
                             </td>
                         </tr>
                     <% } %>
@@ -60,27 +66,33 @@
         <div class="col-md-5">
             <div class="card">
                 <div class="card-body">
-                    <form action="/add" method="post">
+                    <form action="/ejercicios/add" method="post">
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Nombre" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="apellido" placeholder="Apellido" class="form-control">
+                            <input type="text" name="descripcion" placeholder="Descripcion" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="correo" placeholder="Correo" class="form-control">
+                            <input type="text" name="imagen_url" placeholder="URL de la imagen" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="contrasena" placeholder="Contraseña" class="form-control">
+                            <input type="text" name="video_url" placeholder="URL del video" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="fecha_nacimiento" placeholder="Fecha nacimiento / Formato (yyyy-mm-dd)" class="form-control">
+                            <input type="text" name="dificultad" placeholder="Dificultad" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="genero" placeholder="Genero" class="form-control">
+                            <input type="text" name="tipo" placeholder="Tipo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="musculos_trabajados" placeholder="Musculos trabajados" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="calorias_quemadas" placeholder="Calorias quemadas" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            SAVE CUSTOMER
+                            Guardar Ejercicio
                         </button>
                     </form>
                 </div>

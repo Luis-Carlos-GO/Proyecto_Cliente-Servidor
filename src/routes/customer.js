@@ -49,6 +49,10 @@ router.get('/ejercicios/delete/:id', ejercicioController.delete);
 router.get('/ejercicios/update/:id', ejercicioController.edit);
 router.post('/ejercicios/update/:id', ejercicioController.update);
 
+router.get('/ejercicio',ejercicioController.liste);
+
+
+
 //metodos de Rutina Ejercicios
 router.get('/rutinaejercicios', rutinaEjercicioController.list);
 

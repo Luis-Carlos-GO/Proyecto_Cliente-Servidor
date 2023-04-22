@@ -13,6 +13,20 @@ ejercicioController.list = (req,res)=>{
     });
 };
 
+ejercicioController.liste = (req,res)=>{
+    req.getConnection((err,conn) => {
+        conn.query('SELECT * FROM ejercicio', (err,ejercicios) => {
+            if(err) {
+                res,json(err);
+            }
+            res.render('ejercicio', {
+                data:ejercicios
+            });
+        });
+    });
+};
+
+
 ejercicioController.save = (req, res) => {
     const data = req.body;
 
