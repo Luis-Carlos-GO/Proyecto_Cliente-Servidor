@@ -13,6 +13,35 @@ controller.list = (req,res)=>{
     });
 };
 
+controller.admin = (req,res)=>{
+    res.render('admin')
+};
+
+controller.menu = (req,res)=>{
+    res.render('menu')
+};
+
+controller.preferences = (req,res)=>{
+    res.render('preferences')
+};
+
+controller.profile = (req,res)=>{
+    res.render('profile')
+};
+
+controller.workpages = (req,res)=>{
+    res.render('WorkPage')
+};
+
+controller.signin = (req,res)=>{
+    res.render('SignIn')
+};
+
+controller.login = (req,res)=>{
+    res.render('login')
+};
+
+
 controller.save = (req, res) => {
     const data = req.body;
 

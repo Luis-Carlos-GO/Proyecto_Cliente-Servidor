@@ -15,12 +15,22 @@ const registroEjercicioController = require('../controllers/registroEjercicioCon
 const composicionCorporalController = require('../controllers/composicionCorporalController');
 
 //metodos de customer
-router.get('/', customerController.list);
+router.get('/clientes', customerController.list);
 router.post('/add', customerController.save);
 router.get('/delete/:id', customerController.delete);
 
+
 router.get('/update/:id', customerController.edit);
 router.post('/update/:id', customerController.update);
+
+//otras rutas
+router.get('/admin',customerController.admin);
+router.get('/menu', customerController.menu);
+router.get('/preferences',customerController.preferences);
+router.get('/profile',customerController.profile);
+router.get('/workpage',customerController.workpages);
+router.get('/signin',customerController.signin);
+router.get('/',customerController.login);
 
 //metodos de rutinas
 router.get('/rutinas', rutinaController.list);

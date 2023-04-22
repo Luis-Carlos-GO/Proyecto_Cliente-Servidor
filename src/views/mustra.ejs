@@ -1,0 +1,37 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>nº</th>
+            <th>nombre</th>
+            <th>descripcion</th>
+            
+            <th>video url</th>
+            
+            <th>tipo</th>
+            <th>musculos trabajados</th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% if(data) { %>
+            <% for (var i=0; i< data.length; i++) { %>
+                <tr>
+                    <td><%=(i + 1)%></td>
+                    <td><%= data[i].nombre%></td>
+                    <td><%= data[i].descripcion%></td>
+                    
+                    <td><%= data[i].video_url%></td>
+                    
+                    <td><%= data[i].tipo%></td>
+                    <td><%= data[i].musculos_trabajados%></td>
+                    
+                    <td>
+                        <a href="/ejercicios/delete/<%= data[i].id %>" class="btn btn-danger">delete</a>
+                        <a href="/ejercicios/update/<%= data[i].id %>" class="btn btn-info">update</a>
+                    </td>
+                </tr>
+            <% } %>
+        <%  } %>
+    </tbody>
+</table>
